@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokeflutter/pages/base_page.dart';
+import 'package:pokeflutter/src/pokemon_team/team_generator.dart';
 import 'package:pokeflutter/test_poke_api.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BasePage(),
+      home: const TeamGeneratorPage(),
     );
   }
 }

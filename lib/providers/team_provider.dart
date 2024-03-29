@@ -14,8 +14,7 @@ class TeamProvider {
       dynamic response = await http.get(uri);
       String body = response.body;
       dynamic json = jsonDecode(body);
-      PokemonModel pokemonModel =
-          PokemonModel(); // Crear un nuevo objeto en cada iteración
+      PokemonModel pokemonModel = PokemonModel();
       pokemonModel.id = json['id'].toString();
       pokemonModel.name = json['name'];
       pokemonModel.type1 = json['types'][0]['type']['name'];
@@ -26,7 +25,7 @@ class TeamProvider {
       pokemonModel.ability2 = json['abilities'].length > 1
           ? json['abilities'][1]['ability']['name']
           : null;
-      seisPokemon.add(pokemonModel); // Agregar el nuevo objeto a la lista
+      seisPokemon.add(pokemonModel);
     }
 
     return seisPokemon;
